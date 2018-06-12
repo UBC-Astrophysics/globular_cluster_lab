@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[pdftex]{graphicx}
+\graphicspath{{../images/}}
+\usepackage{boxedminipage}
+\usepackage{ms}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\begin{titlebox}{Translating MESA Results to Observables}
+Ilaria Caiazzo, Jeremy Heyl \\
+TAs: Xianfei Zhang, Sarafina Nance, Ilka Petermann
+\end{titlebox}
+
+\section{Introduction}
+
+White dwarfs are the final stage in the evolution of stars less than about eight solar masses.  Basically, all nuclear energy generation has ceased, so the stars shrink and cool.  
+
+We have created several models of really young white dwarfs from the evolution of stars of one, two and four solar masses for you to explore the subsequent evolution.
+
+We will look at how white dwarfs move through the Hertzsprung-Russell diagram and colour-magnitude diagrams as they age and also examine the luminosity function of white dwarfs, how many white dwarfs are there of a given brightness.
+
+\section{The Inlist}
+
+We will start with the test\_suite directory wd\_cool and change it for our initial models: 
+\begin{verbatim}
+    &star_job
+      show_log_description_at_start = .false.
+
+      mesa_dir = '../../..'
+
+      save_model_number = 31
+      save_model_filename = 'hires_surface.mod'
+
+      load_saved_model = .true.
+      saved_model_name = '../../../data/star_data/white_dwarf_models/1.025_from_
+7.0_z2m2.mod'
+
+      !pgstar_flag = .true.
+
+/ ! end of star_job namelist
+\end{verbatim}
+We change the line with saved\_model\_name to use our first model from a one-solar-mass star (1Mz02wd.mod).  We will look at the other white dwarfs a bit later.
+
+\section{The Evolution}
+
+We will first focus on the white dwarf that results from a one-solar-mass star.  This is typical for the white dwarfs in globular clusters.
+
+\begin{enumerate}
+\item Let's first look at the track of luminosity against effective temperature.  What is happening to the star?
+\item Let's look at luminosity against core temperature.  What is happening here?  What are the different regimes?
+\item Let's look at luminosity against time.  What are the different regimes here?
+\item 
+Now run the evolution for the more massive white dwarfs and add their curves to the preceding diagrams.
+\end{enumerate}
+
+\section{Observations}
+
+ 
+
+\end{document}
