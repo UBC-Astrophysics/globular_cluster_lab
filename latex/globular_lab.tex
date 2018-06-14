@@ -13,33 +13,32 @@ TAs: Xianfei Zhang, Sarafina Nance, Ilka Petermann
 
 \section{Introduction}
 
-White dwarfs are the final stage in the evolution of stars less than about eight solar masses.  Basically, all nuclear energy generation has ceased, so the stars shrink and cool.  
-
-We have created several models of really young white dwarfs from the evolution of stars of one, two and four solar masses for you to explore the subsequent evolution.
-
-We will look at how white dwarfs move through the Hertzsprung-Russell diagram and colour-magnitude diagrams as they age and also examine the luminosity function of white dwarfs, how many white dwarfs are there of a given brightness.
+Globular clusters are groups of up to one million or more stars that were born at nearly the same time, with approximately the same composition and lie at a common distance from us.  This means that by today, the main parameter that will determine how the stars will appear is each of their masses.  To understand the population one must determine the shared age, distance and composition of the group of stars.   These properties of globular clusters (and open clusters as well) make them powerful laboratories to understand stellar evolution and new physics.
 
 \section{The Inlist}
 
-We will start with the test\_suite directory wd\_cool and change it for our initial models: 
-\begin{verbatim}
-    &star_job
-      show_log_description_at_start = .false.
+We will start with the \texttt{test\_suite} directory \texttt{1M\_pre\_ms\_to\_wd} and change it for our initial models.  Each student will choose an initial mass and initial metallicity to run and we will bring together all of the data in the next laboratory ``Translating MESA Results to Observables.''   Here is the list of models to choose from:
 
-      mesa_dir = '../../..'
+\begin{center}
+\begin{tabular}{c|ccc}
+\hline
+$Z=0.02$ &
+$Z=0.007$ &
+$Z=0.002$ & 
+$Z=0.0007$ 
+\\  \hline 
+3.0 & 1.1 & 1.1 & 1.1  \\
+2.1 & 0.8 & 0.8 & 0.8  \\
+1.5 & 0.6 & 0.6 & 0.6 \\
+1.1 & 0.4 & 0.4 & 0.4  \\
+0.8 & 0.3 & 0.3 & 0.3  \\
+0.6 & 0.21 & 0.21 & 0.21 \\
+0.4 & 0.15 & 0.15 & 0.15 \\
+0.3 & 0.11 & 0.11 & 0.11 
+\end{tabular}
+\end{center}
 
-      save_model_number = 31
-      save_model_filename = 'hires_surface.mod'
-
-      load_saved_model = .true.
-      saved_model_name = '../../../data/star_data/white_dwarf_models/1.025_from_
-7.0_z2m2.mod'
-
-      !pgstar_flag = .true.
-
-/ ! end of star_job namelist
-\end{verbatim}
-We change the line with saved\_model\_name to use our first model from a one-solar-mass star (1Mz02wd.mod).  We will look at the other white dwarfs a bit later.
+Typically it takes MESA only a few minutes to reach the end of the central hydrogen burning but at least an hour to start helium burning and ascend the asymptotic giant branch, so if you start the models now, we will have a suite of models reaching up the giant branch and perhaps into the helium-burning regime.
 
 \section{The Evolution}
 
