@@ -137,7 +137,7 @@ for j in range(len(Magnitudes)):
     F606vec = F606vec - 5*(logR - 7.65) + 5
     mag.append(F606vec)
 
-with open(sys.argv[3],"w") as f:
+with open(sys.argv[3],"wt") as f:
     f.write(('#'+(' %s'*len(sys.argv))+'\n') % tuple(sys.argv))
     f.write(('#'+(' %s'*len(olabels))+'\n') % tuple(olabels))
     for l in labels:
