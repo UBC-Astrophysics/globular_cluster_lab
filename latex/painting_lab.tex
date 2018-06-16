@@ -17,9 +17,50 @@ In the previous lab, you looked at the colour-magnitude diagram of your globular
 
 \section{Analysing the Globular Cluster}
 
+\textbf{Task:}
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+\item
+The first step for all of the models is that you have to paint them with the appropriate atmosphere.  You have to match the metallicity of the interior with the right atmosphere file.
+\item 
+Now plot each model on top of the CMD for your cluster.
+\item
+Remember that you can vary the distance and reddening to get the model to fit, so you have to focus on the shape of the model compared to the data.
+\item Remember what were the special places in the diagram to focus on:
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+    \item Turn-Off
+    \item Subgiant Branch
+    \item Red Giant Branch
+    \item Red Bump
+    \item Red Clump of Horizontal Branch
+\end{enumerate}
+\item You will find that you might have to compromise between getting the turn-off right and the red bump and clump.  Do your best.  
+\item Plot all of the models of the same metallicity onto the cluster at once and vary the distance and reddening for all of them.  That way you can look at stars below the turn-off too.  
+\item You might find that the best model might be in between two models. It only takes a few minutes for MESA to run a star past the turn-off, so you can try running some new models as you go.
+\item What was your best values for your cluster?
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+    \item Distance Modulus (what you added to the magnitudes)
+    \item Reddening (what you added to the colour)
+    \item Metallicity
+    \item Turn-Off Mass
+    \item Age
+\end{enumerate}
+\item Plot the lower mass models for the same metallicity onto your cluster as well, using the same values of distance and reddening.
+\end{enumerate}
+
 \section{Analysing the Open Clusters}
 
-At the bottom of the notebook, you can plot the models at solar composition for the various masses to try to find the turn-off mass for the Hyades and Pleiades open clusters.   Here the data from GAIA gives the absolute magnitude of the stars, and these clusters are so close that reddening is not important, so you can plot the painted models directly on the data without any shifts.   Can you estimate the ages of these two clusters?
+At the bottom of the notebook, you can plot the models at solar composition for the various masses to try to find the turn-off mass for the Hyades and Pleiades open clusters.   Here the data from GAIA gives the absolute magnitude of the stars, and these clusters are so close that reddening is not important, so you can plot the painted models directly on the data without any shifts.  We also know that the metallicity is approximately solar so you can use just the solar models.  Can you estimate the ages of these two clusters?
 
-
+\textbf{Task:}
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+\item Apply the solar composition atmospheres to the solar composition models.
+\item Plot all of the solar models on top of the data for each of the clusters.  
+\item Determine which of the models fits the turn-off the best.  Perhaps it is in between two models.
+\item It only takes a few minutes for MESA to run a star past the turn-off, so you can try running some new models as you go.
+\item Calculate the turn-off age for your best model and give the age of the cluster.
+\end{enumerate}
 \end{document}
