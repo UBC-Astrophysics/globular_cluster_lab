@@ -68,7 +68,7 @@ We have included data for the globular cluster 47 Tucanane as an example along w
     run ./paintisochrone.py history1M.data colmag.BT-Settl.all.UBC-Castelli.VegaM+0.00.txt paintedhistory1M.data
 \end{verbatim}
 }}
-creates a new file that contains the photometric information for the particular MESA history.  Here we have added the photometric information from stellar atmospheres with solar composition, in particular $M=[Fe/H]=0$.
+creates a new file that contains the photometric information for the particular MESA history.  Here we have added the photometric information from stellar atmospheres with solar composition, in particular $M=[\textrm{Fe/H}]=0$.
 
 \section{HST Data}
 
@@ -99,25 +99,26 @@ The Jupyter notebook runs through the analysis of the globular cluster 47 Tucana
 \item Now examine the key areas of the diagram:
 \begin{enumerate}
  \setlength\itemsep{0em}
-
     \item \textbf{Turn-Off:}
-    In general as stars along the main sequence get brighter they get bluer.  The point where the stars get redder as they get brighter is called the ``turn-off.''  During the evolution of the star as it burns hydrogen in its core, it also gets bluer and brightens until the hydrogen in the core is exhausted.  Mark the moment that the model stars run out of hydrogen in their core.
+    In general as stars along the main sequence get brighter they get bluer.  The point where the stars get redder as they get brighter is called the ``turn-off.''  During the evolution of the star as it burns hydrogen in its core, it also gets bluer and brightens until the hydrogen in the core is exhausted.  Mark the moment that the model stars run out of hydrogen in their core and see how it corresponds to where the stars in the cluster become redder as they get brighter.
     \item \textbf{Subgiant Branch:}
-    After the hydrogen is exhausted in the core, the burning layer moves away from the centre of the star. 
-
+    After the hydrogen is exhausted in the core, the burning layer moves away from the centre of the star.  As the burning layer gets thinner and thinner the star becomes redder and redder without getting much brighter across the ``subgiant branch'' until the burning layer is essentially a shell. Stars in a globular cluster spend hundreds of millions of years in this stars, but stars more massive than about 1.2 solar masses transverse the subgiant branch in tens of millions of years, so subgiants of more massive stars are very rare, as you can tell from the Hyades plot.
     \item \textbf{Red-Giant Branch:}
-
-    \item \textbf{Red-Giant Branch:}
+    Once the burning layer is a shell, the star continues to get redder, and it also gets brighter too, forming the ``red-giant branch.''
     \item \textbf{Red Bump:} The ``red bump'' is an excess of stars on the red-giant branch.  
     
     In the models, this is a loop up and down the giant branch, so the model line will look thicker here.  The burning region of stars in the red bump has just reached the bottom of the outer convective zone, bringing fresh fuel to the fusion region. This actually makes the stars fainter for a bit, but once the burning zone is connected convectively to the surface the stars get brighter quickly, so the observed colour-magnitude diagram thins out.
+    
     \item \textbf{Red Clump}: Not all clusters have a ``red clump'' which is the region just redward of the giant branch.  Some have a large horizontal group of stars reaching blueward called ``the horizonal branch.''  Stars in the red clump or the horizontal branch are fusing helium in their cores.  What does your cluster have?  The bump of your cluster might be brighter or fainter than the red clump.  Is yours brighter or fainter?  
     
     In the models this part of the evolution looks like a bunch of loops.
-    
 \end{enumerate}
+    \item Which of the two models fit your colour-magnitude diagram the best?  
+    \item Which parts of the diagram are well fit and which are poorly fit?
 \end{enumerate}
 
+\section{GAIA Data}
 
+At the bottom of the notebook, you can plot some higher mass models on the data for the Hyades and Pleiades open clusters.  We will work with them more in the next lab. 
 
 \end{document}
