@@ -50,7 +50,7 @@ Set \texttt{initial\_mass} and \texttt{initial\_z} equal to your assigned values
 \end{enumerate}
 We will use these models in the second part of this morning's lab.
 
-\section{HST Data}
+\section{Starting Jupyter}
 
 \textbf{Task:} We have a prepared a sample Jupyter notebook to analyse the data from the globular cluster 47 Tucanae and compare them with some precalculated models.   
 \begin{enumerate}
@@ -62,7 +62,15 @@ A web browser window will open, double-click on \texttt{Globular Cluster Lab.ipy
 \item
 Look through the notebook to see how to plot the data and the models. 
 \end{enumerate}
-We have included data for the globular cluster 47 Tucanane as an example along with the painted MESA history files for  $0.9~M_\odot$, $1.0~M_\odot$ and $1.4~M_\odot$ stars to compare with the data. We use the term ``painting'' to mean that we have included the calculations of the stellar atmospheres appropriate for the model to determine the stellar spectra and absolute magnitudes in a suite of filters.
+We have included data for the globular cluster 47 Tucanane as an example along with the MESA history files for  $0.9~M_\odot$, $1.0~M_\odot$ and $1.4~M_\odot$ stars to compare with the data.   The MESA history files don't contain the information to show the evolution in terms of the observed fluxes.  We use the term ``painting'' to mean that we have included the calculations of the stellar atmospheres appropriate for the model to determine the stellar spectra and absolute magnitudes in a suite of filters.  The following command
+{\small{
+\begin{verbatim}
+    run ./paintisochrone.py history1M.data colmag.BT-Settl.all.UBC-Castelli.VegaM+0.00.txt paintedhistory1M.data
+\end{verbatim}
+}}
+creates a new file that contains the photometric information for the particular MESA history.  Here we have added the photometric information from stellar atmospheres with solar composition, in particular $M=[Fe/H]=0$.
+
+\section{HST Data}
 
 The photometry data from the Hubble Space Telescope for many globular clusters (along with dwarf galaxies, Andromeda etc.) are available from the Hubble website.
 
@@ -73,9 +81,43 @@ You will download photometry for a cluster of your choice from the Hubble websit
 \item Go to https://archive.stsci.edu/prepds/acsggct/.  
 \item Click on ``via browser.''
 \item Choose a cluster to study.
-\item Download the \texttt{.zpt} file from the directory.  
+\item Download the \texttt{.zpt} file into the directory that contains the Jupyter notebook.  
 \end{enumerate}
 This contains the magnitudes of the stars in the image in the HST filters F606W and F814W.  They are called V and I in the file from the HST website and F606W and F814W in the painted history files.
+
+\section{Analysing Your Cluster}
+
+The Jupyter notebook runs through the analysis of the globular cluster 47 Tucanae and the Hyades open cluster.  The data for the Hyades are from GAIA.  In this lab, you will look at your selected globular cluster with the models provided.
+
+\textbf{Task:}
+\begin{enumerate}
+ \setlength\itemsep{0em}
+\item Plot the colour-magnitude diagram for your cluster.  You will have to adjust the limits.
+\item Plot the one-solar-mass model on top of the data.  Does it lie anywhere near the data?
+\item For 47 Tucanae you will notice that we added a number to the colour and to the magnitude.  These are the reddening and the distance modulus for the cluster.   Find the numbers that give the best match to your cluster.
+\item Add the 0.9-solar-mass model on top of the data.  Does it lie anywhere near the data if you use the same numbers that you found for the one-solar-mass model?  Adjust the numbers until it gets close to your model.
+\item Now examine the key areas of the diagram:
+\begin{enumerate}
+ \setlength\itemsep{0em}
+
+    \item \textbf{Turn-Off:}
+    In general as stars along the main sequence get brighter they get bluer.  The point where the stars get redder as they get brighter is called the ``turn-off.''  During the evolution of the star as it burns hydrogen in its core, it also gets bluer and brightens until the hydrogen in the core is exhausted.  Mark the moment that the model stars run out of hydrogen in their core.
+    \item \textbf{Subgiant Branch:}
+    After the hydrogen is exhausted in the core, the burning layer moves away from the centre of the star. 
+
+    \item \textbf{Red-Giant Branch:}
+
+    \item \textbf{Red-Giant Branch:}
+    \item \textbf{Red Bump:} The ``red bump'' is an excess of stars on the red-giant branch.  
+    
+    In the models, this is a loop up and down the giant branch, so the model line will look thicker here.  The burning region of stars in the red bump has just reached the bottom of the outer convective zone, bringing fresh fuel to the fusion region. This actually makes the stars fainter for a bit, but once the burning zone is connected convectively to the surface the stars get brighter quickly, so the observed colour-magnitude diagram thins out.
+    \item \textbf{Red Clump}: Not all clusters have a ``red clump'' which is the region just redward of the giant branch.  Some have a large horizontal group of stars reaching blueward called ``the horizonal branch.''  Stars in the red clump or the horizontal branch are fusing helium in their cores.  What does your cluster have?  The bump of your cluster might be brighter or fainter than the red clump.  Is yours brighter or fainter?  
+    
+    In the models this part of the evolution looks like a bunch of loops.
+    
+\end{enumerate}
+\end{enumerate}
+
 
 
 \end{document}
