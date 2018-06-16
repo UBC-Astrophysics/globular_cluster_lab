@@ -68,7 +68,7 @@ We have included data for the globular cluster 47 Tucanane as an example along w
     run ./paintisochrone.py history1M.data colmag.BT-Settl.all.UBC-Castelli.VegaM+0.00.txt paintedhistory1M.data
 \end{verbatim}
 }}
-creates a new file that contains the photometric information for the particular MESA history.  Here we have added the photometric information from stellar atmospheres with solar composition, in particular $M=[\textrm{Fe/H}]=0$.
+creates a new file that contains the photometric information for the particular MESA history.  Here we have added the photometric information from stellar atmospheres with solar composition, in particular $M=[\textrm{Fe/H}]=0$.  You will also examine a model with one-tenth of the metallicity of the Sun to compare with your globular cluster.
 
 \section{HST Data}
 
@@ -93,7 +93,7 @@ The Jupyter notebook runs through the analysis of the globular cluster 47 Tucana
 \begin{enumerate}
  \setlength\itemsep{0em}
 \item Plot the colour-magnitude diagram for your cluster.  You will have to adjust the limits.
-\item Plot the one-solar-mass model on top of the data.  Does it lie anywhere near the data?
+\item Plot the one-solar-mass model on top of the data.  Focus only on the upper part of the color-magnitude diagram (above the turn-off). Does it lie anywhere near the data?
 \item For 47 Tucanae you will notice that we added a number to the colour and to the magnitude.  These are the reddening and the distance modulus for the cluster.   Find the numbers that give the best match to your cluster.
 \item Add the 0.9-solar-mass model on top of the data.  Does it lie anywhere near the data if you use the same numbers that you found for the one-solar-mass model?  Adjust the numbers until it gets close to your model.
 \item Now examine the key areas of the diagram:
@@ -119,6 +119,6 @@ The Jupyter notebook runs through the analysis of the globular cluster 47 Tucana
 
 \section{GAIA Data}
 
-At the bottom of the notebook, you can plot some higher mass models on the data for the Hyades and Pleiades open clusters.  We will work with them more in the next lab. 
+At the bottom of the notebook, you can plot some higher mass models on the data for the Hyades and Pleiades open clusters.  We will work with them more in the next lab.   Here the data from GAIA gives the absolute magnitude of the stars, and these clusters are so close that reddening is not important, so you can plot the painted models directly on the data without any shifts.
 
 \end{document}
