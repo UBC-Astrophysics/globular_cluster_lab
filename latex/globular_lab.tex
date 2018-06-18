@@ -13,7 +13,7 @@ TAs: Xianfei Zhang, Sarafina Nance, Ilka Petermann
 
 \section{Introduction}
 
-Globular clusters are groups of up to one million or more stars that were born at nearly the same time, with approximately the same composition and lie at a common distance from us.  This means that by today, the main parameter that will determine how the stars will appear is their mass. To understand the population one must determine the shared age, distance and composition of the group of stars. These properties of globular clusters (and open clusters as well) make them powerful laboratories to understand stellar evolution and new physics.
+Globular clusters are groups of up to one million or more stars that were born at nearly the same time, with approximately the same composition and lie at a common distance from us.  This means that by today, the main parameter that will determine how the stars will appear is their mass. To understand the population one must determine the shared age, distance and composition of the group of stars. These properties of globular clusters (and open clusters as well) make them powerful laboratories to understand stellar evolution and test new physics.
 
 \section{The Inlist}
 
@@ -62,12 +62,13 @@ A web browser window will open, double-click on \texttt{Globular Cluster Lab.ipy
 \item
 Look through the notebook to see how to plot the data and the models. 
 \end{enumerate}
-We have included data for the globular cluster 47 Tucanane as an example along with the MESA history files for  $0.9~M_\odot$, $1.0~M_\odot$ and $1.4~M_\odot$ stars to compare with the data.   The MESA history files don't contain the information to show the evolution in terms of the observed fluxes.  We use the term ``painting'' to mean that we have included the calculations of the stellar atmospheres appropriate for the model to determine the stellar spectra and absolute magnitudes in a suite of filters.  The following command
+We have included data for the globular cluster 47 Tucanane as an example along with the MESA history files for  $0.9~M_\odot$, $1.0~M_\odot$ and $1.4~M_\odot$ stars to compare with the data.   The MESA history files don't contain the information to show the evolution in terms of the observed fluxes.  We use the term ``painting'' to mean that we have included the calculations of the stellar atmospheres appropriate for the model to determine the stellar spectra and absolute magnitudes in a suite of filters.  The following command \\
+\\
 {\small{
-\begin{verbatim}
+\texttt{
     run ./paintisochrone.py history1M.data colmag.BT-Settl.all.UBC-Castelli.VegaM+0.00.txt paintedhistory1M.data
-\end{verbatim}
-}}
+}
+}}\\
 creates a new file that contains the photometric information for the particular MESA history.  Here we have added the photometric information from stellar atmospheres with solar composition, in particular $M=[\textrm{Fe/H}]=0$.  You will also examine a model with one-tenth of the metallicity of the Sun to compare with your globular cluster.
 
 \section{HST Data}
